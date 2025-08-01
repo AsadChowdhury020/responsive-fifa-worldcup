@@ -17,6 +17,9 @@
   border: none;
   border-radius: 5px;
 }
+img {
+  max-width: 100%;
+}
 /*Custom styles*/
 .banner {
   display: flex;
@@ -68,7 +71,8 @@
 .match-section {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(3, 1f);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 65px;
 }
 .card {
   border: 1px solid rgb(232, 232, 232);
@@ -78,9 +82,9 @@
   width: 100%;
   height: 175px;
   border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
-.card-body{
+.card-body {
   padding: 20px;
 }
 .card button {
@@ -104,4 +108,95 @@
   display: flex;
   gap: 41px;
   color: #161616;
+}
+.hide{
+  display: none;
+}
+/*Medium device*/
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .banner-description {
+    padding: 30px;
+    flex: 1;
+  }
+  .banner-description h3 {
+    font-size: 50px;
+    font-weight: 700;
+  }
+  .banner-image {
+    flex: 1;
+    width: 100%;
+  }
+
+  .upcoming-match {
+    display: flex;
+    flex-direction: column;
+  }
+  .button-section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: transparent;
+  }
+  .button-section > * {
+    flex: 1;
+  }
+  .button-section .btn-custom {
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+  }
+  .match-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+/*Small device*/
+@media screen and (max-width: 576px) {
+  .banner{
+    flex-direction: column;
+    text-align: center;
+  }
+  .banner-description {
+    padding: 10px;
+    flex: 1;
+  }
+  .banner-description h3 {
+    font-size: 50px;
+    font-weight: 700;
+    max-width: 100%;
+  }
+  .banner-description p {
+    max-width: 100%;
+  }
+  .banner-description button {
+   margin-bottom: 10px;
+  }
+  .banner-image {
+    flex: 1;
+    max-width: 100%;
+  }
+
+.upcoming-match {
+    display: flex;
+    flex-direction: column;
+  }
+.button-section {
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+  }
+   .button-section > * {
+    flex: 1;
+  }
+  .button-section .btn-custom {
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+  }
+  .match-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
 }
